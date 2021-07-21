@@ -17,16 +17,17 @@
                         <th>NO.</th>
                         <th>NPM</th>
                         <th>NAMA LENGKAP</th>
-                        <th>TEMPAT, TANGGAL LAHIR</th>
-                        <th>JENIS KELAMIN</th>
-                        <th>TELEPON</th>
-                        <th>ALAMAT</th>
+                        <th>NAMA MATAKULIAH</th>
+                        <th>JUMLAH SKS</th>
+                        <th>NILAI</th>
                         <th>AKSI</th>
                     </tr>
-                    
+                    @php
+                        $no = 1;
+                    @endphp
                     @foreach ($nilai as $n)
                     <tr>
-                        <td>{{ $n->id }}</td>
+                        <td>{{ $no++ }}</td>
                         <td>{{ $n->mahasiswa->npm }}</td>
                         <th>{{ $n->mahasiswa->user->name }}</th>
                         <td>{{ $n->makul->nama_makul }}</td>
